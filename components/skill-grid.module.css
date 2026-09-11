@@ -1,0 +1,8 @@
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border); border-left: 1px solid var(--border); }
+.group { min-height: 11rem; padding: 1.5rem; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.group h3 { color: var(--text-faint); font-family: var(--font-mono); font-size: 0.68rem; font-weight: 500; letter-spacing: 0.07em; text-transform: uppercase; }
+.group ul { display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem; margin-top: 1.1rem; list-style: none; }
+.group li { color: var(--text-muted); font-size: 0.9rem; }
+
+@media (max-width: 48rem) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 30rem) { .grid { grid-template-columns: 1fr; } .group { min-height: auto; } }

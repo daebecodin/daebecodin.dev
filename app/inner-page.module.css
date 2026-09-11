@@ -1,0 +1,13 @@
+.content { padding-bottom: 9rem; }
+.narrow { max-width: 48rem; }
+.projectList { display: grid; gap: 1.5rem; }
+.postList { display: grid; }
+.note {
+  padding: 1.25rem 1.4rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: 0.75rem;
+}
+.note code { color: var(--accent); font-family: var(--font-mono); font-size: 0.84em; }

@@ -1,0 +1,76 @@
+.page {
+  display: grid;
+  min-height: calc(100dvh - 9.25rem);
+  place-items: center;
+}
+
+.hero {
+  width: 100%;
+  padding-block: clamp(3rem, 8vh, 6rem);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 58rem;
+  margin-top: 1.25rem;
+  font-size: clamp(3.3rem, 9vw, 7.4rem);
+  font-weight: 400;
+  line-height: 0.94;
+  letter-spacing: -0.072em;
+}
+
+.hero h1 span { color: var(--accent); }
+
+.intro {
+  max-width: 36rem;
+  margin-top: 2rem;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.7;
+}
+
+.heroLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2.1rem;
+}
+
+.heroLinks > a,
+.heroLinks > button {
+  display: inline-flex;
+  gap: 0.45rem;
+  align-items: center;
+  padding: 0.72rem 0.95rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  border-radius: 0.55rem;
+  transition: transform 150ms ease, background 150ms ease, border-color 150ms ease;
+}
+
+.heroLinks > a:hover,
+.heroLinks > button:hover { transform: translateY(-2px); }
+.primary { color: var(--on-accent); background: var(--accent); border: 1px solid var(--accent); }
+.primary:hover { background: var(--accent-hover); }
+.secondary { color: var(--text-muted); background: transparent; border: 1px solid var(--border-strong); cursor: pointer; }
+.secondary:hover { color: var(--text); background: var(--surface); border-color: var(--accent-border); }
+
+@media (max-width: 50rem) {
+  .page { min-height: calc(100dvh - 13.5rem); }
+}
+
+@media (max-width: 36rem) {
+  .hero { padding-block: 3rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroLinks > a,
+  .heroLinks > button { transition: none; }
+}

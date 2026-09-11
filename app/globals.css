@@ -1,0 +1,84 @@
+:root {
+  color-scheme: dark;
+  --background: #1a1c1d;
+  --surface: #242627;
+  --surface-raised: #2b2d2e;
+  --surface-hover: #343536;
+  --border: #3b3b3b;
+  --border-strong: #4b4f54;
+  --text: #e6d5c1;
+  --text-muted: #b7a99a;
+  --text-faint: #837d7b;
+  --accent: #d7b59a;
+  --accent-hover: #c09c8e;
+  --on-accent: #1a1c1d;
+  --accent-soft: rgba(215, 181, 154, 0.08);
+  --accent-border: rgba(215, 181, 154, 0.34);
+  --secondary: #8f6064;
+  --shadow-sm: 0 12px 40px rgba(0, 0, 0, 0.16);
+  --shadow-lg: 0 18px 60px rgba(0, 0, 0, 0.28);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+.light {
+  color-scheme: light;
+  --background: #f4eee7;
+  --surface: #faf6f1;
+  --surface-raised: #e8ded4;
+  --surface-hover: #dfd2c7;
+  --border: #d5c7bb;
+  --border-strong: #b9a89a;
+  --text: #272321;
+  --text-muted: #625a55;
+  --text-faint: #80756e;
+  --accent: #8f6064;
+  --accent-hover: #754b50;
+  --on-accent: #fffaf5;
+  --accent-soft: rgba(143, 96, 100, 0.08);
+  --accent-border: rgba(143, 96, 100, 0.3);
+  --secondary: #8f6064;
+  --shadow-sm: 0 12px 40px rgba(66, 51, 39, 0.07);
+  --shadow-lg: 0 18px 60px rgba(66, 51, 39, 0.14);
+}
+
+* { box-sizing: border-box; padding: 0; margin: 0; }
+html { scroll-behavior: smooth; }
+body {
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 18% -10%, rgba(143, 96, 100, 0.12), transparent 30rem),
+    var(--background);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; text-decoration: none; }
+button, input, textarea { font: inherit; }
+::selection { color: var(--background); background: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  padding: 0.65rem 0.8rem;
+  color: var(--background);
+  background: var(--accent);
+  border-radius: 0.5rem;
+  transform: translateY(-150%);
+}
+.skip-link:focus { transform: translateY(0); }

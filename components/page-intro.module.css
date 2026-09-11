@@ -1,0 +1,25 @@
+.intro { padding-block: clamp(5rem, 12vw, 9rem) clamp(3.5rem, 8vw, 6rem); }
+.intro p {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.intro h1 {
+  max-width: 54rem;
+  margin-top: 1rem;
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.068em;
+}
+.rule { width: 4rem; height: 1px; margin-top: 2rem; background: var(--accent); }
+.intro span {
+  display: block;
+  max-width: 38rem;
+  margin-top: 1.5rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}

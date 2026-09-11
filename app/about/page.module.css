@@ -1,0 +1,33 @@
+.content { padding-bottom: 9rem; }
+.label { color: var(--accent); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.story,
+.education,
+.contact { display: grid; grid-template-columns: minmax(10rem, 1fr) 2fr; gap: 4rem; padding-block: 4rem; border-top: 1px solid var(--border); }
+.story h2,
+.sectionTitle h2,
+.contact h2 { max-width: 42rem; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 400; line-height: 1.06; letter-spacing: -0.055em; }
+.story div > p,
+.contact div > p:not(.label) { max-width: 42rem; margin-top: 1.2rem; color: var(--text-muted); line-height: 1.75; }
+.educationCard { display: grid; grid-template-columns: 1fr auto; gap: 1.4rem 2rem; padding: 1.5rem; background: var(--surface); border: 1px solid var(--border); border-radius: 0.85rem; }
+.educationCard h2 { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.025em; }
+.educationCard div > p,
+.educationCard > span,
+.club { color: var(--text-muted); font-size: 0.9rem; }
+.educationCard div > p { margin-top: 0.35rem; }
+.educationCard > span { font-family: var(--font-mono); font-size: 0.72rem; }
+.club { grid-column: 1 / -1; padding-top: 1.2rem; border-top: 1px solid var(--border); }
+.skills { padding-block: 4rem; border-top: 1px solid var(--border); }
+.sectionTitle { display: grid; grid-template-columns: minmax(10rem, 1fr) 2fr; gap: 4rem; margin-bottom: 2rem; }
+.contactLinks { display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-start; }
+.contactLinks > a:first-child { display: inline-flex; gap: 0.45rem; align-items: center; padding: 0.7rem 0.9rem; color: var(--on-accent); font-family: var(--font-mono); font-size: 0.74rem; background: var(--accent); border-radius: 0.55rem; }
+.external { display: inline-flex; gap: 0.3rem; align-items: center; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.72rem; }
+.external:hover { color: var(--accent); }
+
+@media (max-width: 48rem) {
+  .story,
+  .education,
+  .contact,
+  .sectionTitle { grid-template-columns: 1fr; gap: 1.5rem; }
+  .educationCard { grid-template-columns: 1fr; }
+  .club { grid-column: auto; }
+}

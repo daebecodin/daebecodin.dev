@@ -1,0 +1,2 @@
+.page { display: grid; min-height: calc(100vh - 4.5rem - 6rem); place-items: center; padding: 2rem; }
+.page p { color: var(--text-muted); font-size: clamp(2rem, 7vw, 5rem); letter-spacing: -0.06em; }

@@ -1,0 +1,29 @@
+# dependencies
+node_modules/
+.pnpm-home/
+.pnpm-store/
+.npm-cache/
+
+# next.js
+.next/
+out/
+
+# production
+build/
+
+# local environment
+.env*
+!.env.example
+
+# editor and OS
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+
+# logs
+*.log
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts

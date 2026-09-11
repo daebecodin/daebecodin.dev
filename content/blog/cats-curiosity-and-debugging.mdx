@@ -1,0 +1,37 @@
+---
+title: "Cats, Curiosity, and Debugging"
+description: "A small launch note about curiosity, patient observation, and what cats can teach us about debugging code."
+publishedAt: "2026-09-07"
+tags:
+  - cats
+  - notes
+draft: false
+---
+
+Cats are excellent debuggers. They inspect a room slowly, notice the smallest change, and keep testing an idea until the mystery makes sense. That is not far from what I do when a program behaves in a way I did not expect.
+
+## Start with observation
+
+When something breaks, my first instinct can be to change code immediately. A better first step is to watch closely. What happened? What did I expect? What changed between the last working state and this one?
+
+A cat does not rewrite the room. It watches the suspicious cardboard box.
+
+## Test one idea at a time
+
+Debugging gets noisy when I change several things at once. Small experiments make the result easier to understand:
+
+```cpp
+const bool vaultUnlocked = verifyUser();
+
+if (!vaultUnlocked) {
+  return;
+}
+```
+
+One check, one result, one new piece of information. It is slower for a minute and much faster over an hour.
+
+## Stay curious
+
+The best lesson is simple: confusion is a clue, not a failure. A strange bug points toward something I do not understand yet. Curiosity turns that gap into a reason to keep looking.
+
+This is a dummy article for the launch of my blog, but the workflow is real. I will use this space for notes on software, Windows internals, C++, game security, and anything useful I learn along the way.

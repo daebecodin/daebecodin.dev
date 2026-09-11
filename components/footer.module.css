@@ -1,0 +1,11 @@
+.footer { padding-block: 2rem; border-top: 1px solid var(--border); }
+.inner { display: grid; grid-template-columns: 1fr auto 1fr; gap: 2rem; align-items: center; }
+.inner > p,
+.inner > a { color: var(--text-faint); font-family: var(--font-mono); font-size: 0.68rem; }
+.inner > a { justify-self: end; }
+.inner > a:hover { color: var(--accent); }
+
+@media (max-width: 50rem) {
+  .inner { grid-template-columns: 1fr; gap: 1rem; }
+  .inner > a { justify-self: start; }
+}

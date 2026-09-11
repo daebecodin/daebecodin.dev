@@ -1,0 +1,19 @@
+.card { border-top: 1px solid var(--border); }
+.card:last-child { border-bottom: 1px solid var(--border); }
+.card > a { display: block; padding-block: 1.6rem; }
+.meta {
+  display: flex;
+  gap: 0.45rem;
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.titleRow { display: flex; justify-content: space-between; gap: 1rem; align-items: start; margin-top: 0.65rem; }
+.titleRow h3 { font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 450; letter-spacing: -0.035em; }
+.titleRow svg { flex: 0 0 auto; margin-top: 0.2rem; color: var(--text-faint); transition: color 150ms ease, transform 150ms ease; }
+.card > a:hover .titleRow svg { color: var(--accent); transform: translate(2px, -2px); }
+.card p { max-width: 43rem; margin-top: 0.55rem; color: var(--text-muted); line-height: 1.65; }
+.card ul { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 0.9rem; list-style: none; }
+.card li { color: var(--secondary); font-family: var(--font-mono); font-size: 0.68rem; }

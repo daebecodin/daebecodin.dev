@@ -1,0 +1,8 @@
+.links { display: flex; flex-wrap: wrap; gap: 0.7rem 1.2rem; }
+.links a {
+  color: var(--text-faint);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  transition: color 150ms ease;
+}
+.links a:hover { color: var(--accent); }
