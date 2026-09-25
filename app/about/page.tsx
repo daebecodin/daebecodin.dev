@@ -44,6 +44,7 @@ export default function AboutPage() {
             </div>
             <span>Expected 2027</span>
             <p className={styles.club}>Game Development Club</p>
+            <p className={styles.club}>Hardware Engineering Club</p>
           </div>
         </section>
 
