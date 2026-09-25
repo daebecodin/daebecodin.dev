@@ -20,6 +20,9 @@ export default function HomePage() {
             <Link className={styles.primary} href="/projects">
               See my work <ArrowRight size={16} aria-hidden="true" />
             </Link>
+            <a className={styles.secondary} href="/Resume.pdf" download>
+              Resume
+            </a>
             <ContactDialog triggerClassName={styles.secondary} />
           </div>
         </Container>
