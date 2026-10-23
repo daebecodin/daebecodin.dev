@@ -3,9 +3,10 @@
 .inner > p,
 .inner > a { color: var(--text-faint); font-family: var(--font-mono); font-size: 0.68rem; }
 .inner > a { justify-self: end; }
-.inner > a:hover { color: var(--accent); }
+.inner > a:hover { color: var(--accent-text); }
 
 @media (max-width: 50rem) {
   .inner { grid-template-columns: 1fr; gap: 1rem; }
   .inner > a { justify-self: start; }
 }
+

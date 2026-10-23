@@ -1,5 +1,5 @@
 .content { padding-bottom: 9rem; }
-.label { color: var(--accent); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.label { color: var(--accent-text); font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .story,
 .education,
 .contact { display: grid; grid-template-columns: minmax(10rem, 1fr) 2fr; gap: 4rem; padding-block: 4rem; border-top: 1px solid var(--border); }
@@ -21,7 +21,7 @@
 .contactLinks { display: flex; flex-direction: column; gap: 1.2rem; align-items: flex-start; }
 .contactLinks > a:first-child { display: inline-flex; gap: 0.45rem; align-items: center; padding: 0.7rem 0.9rem; color: var(--on-accent); font-family: var(--font-mono); font-size: 0.74rem; background: var(--accent); border-radius: 0.55rem; }
 .external { display: inline-flex; gap: 0.3rem; align-items: center; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.72rem; }
-.external:hover { color: var(--accent); }
+.external:hover { color: var(--accent-text); }
 
 @media (max-width: 48rem) {
   .story,
@@ -31,3 +31,4 @@
   .educationCard { grid-template-columns: 1fr; }
   .club { grid-column: auto; }
 }
+

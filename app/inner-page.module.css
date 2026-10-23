@@ -1,5 +1,5 @@
 .content { padding-bottom: 9rem; }
-.narrow { max-width: 48rem; }
+.narrow { max-width: 60rem; }
 .projectList { display: grid; gap: 1.5rem; }
 .postList { display: grid; }
 .note {
@@ -10,4 +10,8 @@
   border: 1px solid var(--accent-border);
   border-radius: 0.75rem;
 }
-.note code { color: var(--accent); font-family: var(--font-mono); font-size: 0.84em; }
+.note code { color: var(--accent-text); font-family: var(--font-mono); font-size: 0.84em; }
+
+.searchSummary { margin-bottom: 1.5rem; color: var(--text-muted); line-height: 1.7; }
+.searchSummary a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 0.2em; }
+
