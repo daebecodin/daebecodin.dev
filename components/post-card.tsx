@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import type { PostSummary } from "@/lib/posts";
 import styles from "./post-card.module.css";
 
@@ -15,20 +15,22 @@ export function PostCard({ post }: { post: PostSummary }) {
   return (
     <article className={styles.card}>
       <Link href={`/blog/${post.slug}`}>
+        <div className={styles.titleRow}>
+          <h3>{post.title}</h3>
+          <ArrowUpRight size={19} aria-hidden="true" />
+        </div>
         <div className={styles.meta}>
           <time dateTime={post.publishedAt}>{formatPostDate(post.publishedAt)}</time>
           <span aria-hidden="true">·</span>
           <span>{post.readingTime}</span>
         </div>
-        <div className={styles.titleRow}>
-          <h3>{post.title}</h3>
-          <ArrowUpRight size={19} aria-hidden="true" />
-        </div>
         <p>{post.description}</p>
         <ul aria-label="Article tags">
           {post.tags.map((tag) => <li key={tag}>#{tag}</li>)}
         </ul>
+        <span className={styles.readMore}>Continue reading <ArrowRight size={15} aria-hidden="true" /></span>
       </Link>
     </article>
   );
 }
+

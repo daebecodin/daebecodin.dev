@@ -2,8 +2,7 @@
   overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 1rem;
-  box-shadow: var(--shadow-sm);
+  border-radius: 0.3rem;
 }
 
 .imageWrap {
@@ -19,7 +18,7 @@
   aspect-ratio: 2.34 / 1;
   object-fit: cover;
   border: 1px solid color-mix(in srgb, var(--border-strong) 60%, transparent);
-  border-radius: 0.65rem;
+  border-radius: 0.2rem;
 }
 
 .content { padding: clamp(1.35rem, 3vw, 2rem); }
@@ -63,7 +62,7 @@
   font-size: 0.66rem;
   background: var(--surface-raised);
   border: 1px solid var(--border);
-  border-radius: 999px;
+  border-radius: 0.2rem;
 }
 
 .links {
@@ -82,9 +81,10 @@
   font-family: var(--font-mono);
   font-size: 0.72rem;
   border: 1px solid var(--border-strong);
-  border-radius: 0.55rem;
+  border-radius: 0.25rem;
   transition: background 150ms ease, border-color 150ms ease;
 }
 
 .links a:first-child { background: var(--accent-soft); border-color: var(--accent-border); }
-.links a:hover { background: var(--surface-hover); border-color: var(--accent); }
+.links a:hover { background: var(--surface-hover); border-color: var(--accent-text); }
+

@@ -41,7 +41,7 @@
 .close:hover { color: var(--text); background: var(--surface-hover); }
 
 .eyebrow {
-  color: var(--accent);
+  color: var(--accent-text);
   font-family: var(--font-mono);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
@@ -83,9 +83,9 @@
   cursor: pointer;
 }
 
-.copyButton:hover { color: var(--accent); border-color: var(--accent-border); }
+.copyButton:hover { color: var(--accent-text); border-color: var(--accent-border); }
 
-.status { min-height: 1.1rem; margin-top: 0.45rem; color: var(--accent); font-family: var(--font-mono); font-size: 0.7rem; }
+.status { min-height: 1.1rem; margin-top: 0.45rem; color: var(--accent-text); font-family: var(--font-mono); font-size: 0.7rem; }
 
 .emailButton {
   display: inline-flex;
@@ -129,3 +129,4 @@
   .overlay,
   .content { animation: none; }
 }
+

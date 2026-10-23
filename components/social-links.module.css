@@ -5,4 +5,5 @@
   font-size: 0.72rem;
   transition: color 150ms ease;
 }
-.links a:hover { color: var(--accent); }
+.links a:hover { color: var(--accent-text); }
+
