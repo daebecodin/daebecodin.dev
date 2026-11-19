@@ -1,0 +1,15 @@
+---
+import Page from '../layouts/Page.astro';
+import { siteConfig } from '../../lib/site';
+---
+<Page title="Home" active="/">
+  <h1>Hi, I’m Durand.</h1>
+  <p>I study computer science at San Francisco State University. I build software projects and <a href="/writing">write down</a> the useful parts along the way.</p>
+  <p>Right now I’m learning modern C++ and the Windows API while building <a href="/about#account-armory">Account Armory</a>.</p>
+  <dl class="contacts">
+    <dt>Email</dt><dd><a href={'mailto:' + siteConfig.email}>{siteConfig.email}</a></dd>
+    <dt>Elsewhere</dt><dd>{Object.entries(siteConfig.social).map(([key, url]) =>
+      <a href={url}>{{ github: 'GitHub', linkedin: 'LinkedIn', x: 'X', youtube: 'YouTube' }[key as keyof typeof siteConfig.social]}</a>)}</dd>
+    <dt>Résumé</dt><dd><a href="/Resume.pdf">Download PDF</a></dd>
+  </dl>
+</Page>

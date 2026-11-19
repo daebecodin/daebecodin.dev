@@ -1,0 +1,14 @@
+---
+import type { MarkdownHeading } from 'astro';
+interface Props { headings: MarkdownHeading[] }
+const groups: { heading: MarkdownHeading; children: MarkdownHeading[] }[] = [];
+for (const heading of Astro.props.headings) {
+  const parent = groups.at(-1);
+  if (parent && heading.depth > parent.heading.depth) parent.children.push(heading);
+  else groups.push({ heading, children: [] });
+}
+---
+<ul>{groups.map(({ heading, children }) =>
+  <li><a href={'#' + heading.slug}>{heading.text}</a>
+    {children.length > 0 && <Astro.self headings={children} />}
+  </li>)}</ul>

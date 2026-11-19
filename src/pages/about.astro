@@ -1,0 +1,33 @@
+---
+import Contents from '../components/Contents.astro';
+import Page from '../layouts/Page.astro';
+import { projects } from '../../lib/projects';
+import { skillGroups } from '../../lib/profile';
+---
+<Page title="About" active="/about">
+  <h1>About</h1>
+  <p>I’m Durand Dyer, a computer science student interested in the systems beneath the interface. I build projects to learn how software works and how it breaks, especially in game security, reverse engineering, and aim training.</p>
+  <Contents>
+    <ul>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills &amp; tools</a></li>
+    </ul>
+  </Contents>
+  <h2 id="projects">Projects</h2>
+  {projects.map(project => <section id={project.slug}>
+    <h3>{project.name}</h3><small>{project.status} · {project.technologies.join(' / ')}</small>
+    <p>{project.description}</p>
+    <p class="links">
+      {project.githubUrl && <a href={project.githubUrl}>Source on GitHub</a>}
+      {project.liveUrl && <a href={project.liveUrl}>{project.liveLabel}</a>}
+      {project.image && <a href={project.image.src}>Vault screenshot</a>}
+    </p>
+  </section>)}
+  <h2 id="education">Education</h2>
+  <h3>San Francisco State University</h3>
+  <p>B.S. in Computer Science, expected 2027.<br />Game Development Club and Hardware Engineering Club.</p>
+  <a href="/Resume.pdf">Résumé (PDF)</a>
+  <h2 id="skills">Skills &amp; tools</h2>
+  <dl>{skillGroups.map(group => <><dt>{group.title}</dt><dd>{group.skills.join(', ')}</dd></>)}</dl>
+</Page>

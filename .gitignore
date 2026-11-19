@@ -27,3 +27,7 @@ Thumbs.db
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Astro
+.astro/
+dist/

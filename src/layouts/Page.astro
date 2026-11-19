@@ -1,0 +1,25 @@
+---
+import { siteConfig, navigation } from '../../lib/site';
+import '../styles/site.css';
+
+interface Props { title: string; description?: string; active?: string }
+const { title, description = siteConfig.description, active } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+  <link rel="alternate" type="application/rss+xml" title="Writing" href="/rss.xml" />
+  <title>{title} · {siteConfig.name}</title>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><nav aria-label="Main">{navigation.map(({ href, label }) =>
+    <a href={href} aria-current={href === active ? 'page' : undefined}>{label}</a>)}</nav></header>
+  <main id="main" tabindex="-1"><slot /></main>
+  <footer><span>Durand Dyer</span><a href="/rss.xml">RSS</a></footer>
+</body>
+</html>

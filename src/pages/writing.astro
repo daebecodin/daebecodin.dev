@@ -1,0 +1,14 @@
+---
+import Page from '../layouts/Page.astro';
+import { publishedPosts } from '../posts';
+
+const posts = await publishedPosts();
+const years = [...new Set(posts.map(post => post.data.publishedAt.slice(0, 4)))];
+---
+<Page title="Writing" active="/writing">
+  <h1>Writing</h1>
+  {years.map(year => <section><h2>{year}</h2><ul class="archive">
+    {posts.filter(post => post.data.publishedAt.startsWith(year)).map(({ id, data }) =>
+      <li><time datetime={data.publishedAt}>{data.publishedAt}</time><a href={'/blog/' + id}>{data.title}</a></li>)}
+  </ul></section>)}
+</Page>
